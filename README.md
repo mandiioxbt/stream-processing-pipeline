@@ -2,4 +2,18 @@
 
 Event-driven stream processing with exactly-once semantics.
 
-## License: Apache 2.0
+## Features
+- Kafka consumer with exactly-once guarantees
+- Windowed aggregations
+- Dead letter queue
+- Schema registry integration
+
+## Topology
+```
+Kafka → Deserialize → Process → Aggregate → Sink (DB/Topic)
+            ↓
+       Dead Letter Queue
+```
+
+## License
+MIT
